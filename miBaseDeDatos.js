@@ -41,14 +41,14 @@ const createTableQuery = `
     console.log(email)
 
     const traertodo = 'SELECT *FROM users'
-    // const insert = "INSERT INTO users(id, username, email) VALUES(1, 'JorgeRiveros', 'jorgeriveros@gmail.com')"
+    const insert = "INSERT INTO users(id, username, email) VALUES(1, 'JorgeRiveros', 'jorgeriveros@gmail.com')"
     // const user = users.find(user => user.name === name);
-    const insertar = `INSERT INTO users (id, username, email) VALUES('${id}', '${name}', '${email}')`
+    //const insertar = `INSERT INTO users (id, username, email) VALUES('${id}', '${name}', '${email}')`
     const modificar = `UPDATE users SET username = '${name}' WHERE id = '${id}' `
     const eliminar = `DELETE FROM users WHERE id='${id}'`
     
 
-    pool.query(traertodo,(err, res) => {
+    pool.query(insert,(err, res) => {
     if (err) {      
     console.error('Error creating table:', err);
     } else {
